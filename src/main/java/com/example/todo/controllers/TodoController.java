@@ -1,4 +1,4 @@
-package com.example.todo.Controllers;
+package com.example.todo.controllers;
 
 import lombok.AccessLevel;
 import lombok.Getter;
@@ -6,21 +6,22 @@ import lombok.Setter;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 @RestController
 public class TodoController {
 
-    TodoController()
+    public TodoController()
     {
+        todos.put(1, "1");
+        todos.put(2, "2");
+        todos.put(3, "3");
     }
 
     @Getter
     @Setter(AccessLevel.PRIVATE)
-    List<String> todos = List.of(new String[]{
-            "1", "2", "3"
-    });
+    Map<Integer, String> todos = new HashMap<>();
 
     @GetMapping(value = "/todo")
     public Object AllTodos()
