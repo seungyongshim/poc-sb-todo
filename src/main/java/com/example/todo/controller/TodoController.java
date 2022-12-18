@@ -1,4 +1,4 @@
-package com.example.todo.controllers;
+package com.example.todo.controller;
 
 import lombok.AccessLevel;
 import lombok.Getter;
